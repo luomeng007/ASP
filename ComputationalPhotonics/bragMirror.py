@@ -33,9 +33,9 @@ class COPH:
         # we have N periods, so we have 2N layers, we create its corresponding indices
         epsilon = np.zeros(2 * N, dtype=common_data_type)
         # set epsilon value at odd position
-        epsilon[::2] = n1 ** 2
+        epsilon[::2] = pow(n1, 2)
         # set epsilon value at even position
-        epsilon[1::2] = n2 ** 2
+        epsilon[1::2] = pow(n2, 2)
         # use same method to set thickness
         thickness = np.zeros(2 * N)
         thickness[::2] = d1
