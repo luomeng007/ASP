@@ -52,3 +52,9 @@ if __name__ == '__main__':
     print(epsilon_)
     print("The array of thickness_ is:")
     print(thickness_)
+"""
+The array of epsilon_ is:
+[ 2.25 15.21  2.25 15.21  2.25 15.21  2.25 15.21  2.25 15.21]
+The array of thickness_ is:
+[0.13 0.05 0.13 0.05 0.13 0.05 0.13 0.05 0.13 0.05]
+"""
