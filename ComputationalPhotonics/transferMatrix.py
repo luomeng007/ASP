@@ -44,7 +44,7 @@ class COPH:
         else:
             raise ValueError("The input wave mode is not correct. It could be either 'TE' or 'TM'")
 
-        # wave vector of this wave
+        # wave number in vacuum
         k0 = 2 * np.pi / wavelength
         # wave vector along x axis
         kx = np.sqrt(pow(k0, 2) * epsilon - pow(kz, 2))
