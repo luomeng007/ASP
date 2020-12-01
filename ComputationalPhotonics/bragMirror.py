@@ -47,7 +47,7 @@ class COPH:
 
 if __name__ == '__main__':
     main = COPH()
-    epsilon_, thickness_ = main.bragMirror(5, 6.0, 0.1, 0.2, 2)
+    epsilon_, thickness_ = main.bragMirror(np.sqrt(2.25), np.sqrt(15.21), 0.13, 0.05, 5)
     print("The array of epsilon_ is:")
     print(epsilon_)
     print("The array of thickness_ is:")
