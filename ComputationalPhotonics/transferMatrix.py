@@ -24,8 +24,9 @@ import numpy as np
 class COPH:
     @staticmethod
     def transferMatrix(thickness, epsilon, polarization, wavelength, kz):
-        # we know the shape of transfer function is (2, 2), and we know the epsilon may be either complex or float
+        # we know the shape of transfer function is (2, 2), we know the epsilon may be either complex or float
         # so we could divide this into two kinds of situation, with complex and without complex
+        # of course we could just set transfer matrix as complex type, because complex contains float and int
         # in numpy, np.int is equal to np.int32, np.float is equal to np.float64, np.complex is equal to np.complex128
         # but it is better to make clear declaration
         data_type = epsilon.dtype
@@ -63,6 +64,7 @@ class COPH:
 
 
 if __name__ == '__main__':
+    # these two arrays come from the result of program of transfer matrix
     epsilon_ = np.array([2.25, 15.21, 2.25, 15.21, 2.25, 15.21, 2.25, 15.21, 2.25, 15.21])
     thickness_ = np.array([0.13, 0.05, 0.13, 0.05, 0.13, 0.05, 0.13, 0.05, 0.13, 0.05])
     polarization_ = 'TE'
