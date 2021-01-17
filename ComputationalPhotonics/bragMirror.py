@@ -1,8 +1,6 @@
 # -*- coding:utf-8 -*-
 """
 author: 15025
-age: 26
-e-mail: 1502506285@qq.com
 time: 2020/12/1 10:07
 software: PyCharm
 
@@ -15,7 +13,6 @@ Description:
     d1, d2: float, Thicknesses of layers of one period
     N: number of periods.
     periods: one layer with n1 and and another layer with n2. Both of them compose one period
-
 """
 
 import numpy as np
@@ -24,7 +21,7 @@ import numpy as np
 class COPH:
     @staticmethod
     def bragMirror(n1, n2, d1, d2, N):
-        # we are not sure the type of n1 and n2
+        # we read the value of n1 and n2 from outside, so we are not sure the type of n1 and n2.
         # so first we need to get their common_type
         # np.common_type function can only deal with ndarray, so we need to transfer n1, n2 first
         # default type after ndarray transfer for int is int32
@@ -46,8 +43,14 @@ class COPH:
 
 
 if __name__ == '__main__':
+    # set testing parameters
     main = COPH()
-    epsilon_, thickness_ = main.bragMirror(np.sqrt(2.25), np.sqrt(15.21), 0.13, 0.05, 5)
+    n1_ = np.sqrt(2.25)     # type float64
+    n2_ = np.sqrt(15.21)    # type float64
+    d1_ = 0.13
+    d2_ = 0.05
+    N_ = 5
+    epsilon_, thickness_ = main.bragMirror(n1_, n2_, d1_, d2_, N_)
     print("The array of epsilon_ is:")
     print(epsilon_)
     print("The array of thickness_ is:")
